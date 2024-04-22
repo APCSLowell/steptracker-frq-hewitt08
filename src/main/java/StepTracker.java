@@ -5,7 +5,7 @@ public class StepTracker
  private int activeNum;
  private int days;
  private int activeDays;
- private double mySteps;
+ private int mySteps;
 
  StepTracker(int n){
   activeNum = n;
@@ -24,7 +24,10 @@ public class StepTracker
  }
  
  public double averageSteps(){
-  return mySteps/days;
+  if(days==0){
+   return 0.0;
+  }
+  return (double)mySteps/(double)days;
  }
  
 } 
